@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    pad: 0;
+    box-sizing: border-box;
+}
+
+.myForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#url {
+    height: 39px;
+    width: 400px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.submit {
+    padding: 10px 17px;
+}
+
+.content-box {
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    gap: 15px;
+}
