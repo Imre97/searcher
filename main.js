@@ -10,7 +10,6 @@ let words = []
 
 function handleChange(e) {
     url = e.target.value
-    console.log(url)
 }
 
 
@@ -18,7 +17,6 @@ function handleChange(e) {
 function handleSubmit(e) {
     e.preventDefault()
     let xmlhttp = new XMLHttpRequest();
-    console.log
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             let span = document.createElement('div');
@@ -26,7 +24,6 @@ function handleSubmit(e) {
             let res = xmlhttp.responseText.split('</head>')[1];
             span.innerHTML = res;
             words = (span.innerText.match(reg))
-            console.log(words)
             return words;
         }
     }
@@ -46,7 +43,6 @@ function write() {
     let arr = words.map(world => {
         return `<p>${world}</p>`
     })
-    console.log(arr)
 
     contentBox.innerHTML = arr.join("");
 }
