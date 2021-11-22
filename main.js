@@ -22,7 +22,7 @@ function handleSubmit(e) {
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             let span = document.createElement('div');
-            let reg = new RegExp(/[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ]*(ly|Ly)[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ]*/g)
+            let reg = new RegExp(/[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ]*(ly|Ly|LY)[a-zA-ZáéíóöőúüűÁÉÍÓÖŐÚÜŰ]*/g)
             let res = xmlhttp.responseText.split('</head>')[1];
             span.innerHTML = res;
             words = (span.innerText.match(reg))
